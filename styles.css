@@ -1,0 +1,67 @@
+body{
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, rgb(193, 241, 193), white);
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 100vh;
+
+}
+.maincontainer{
+    border: 2px solid darkblue;
+    box-shadow: 10px 5px 10px 10px grey;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 0px;
+    background: gainsboro;
+    width: 700px;
+}
+.nav
+{
+
+    background-color:burlywood;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom: 2px solid black;
+}
+.heading{
+    font-size: 25px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+[name*="caltxt"]{
+    margin: 10px 0px 0px 0px ;
+    border-radius: 5px;
+    height: 90px;
+    width: 100%;
+    border: 2px solid grey;
+    font-size: 60px;
+    background-color: silver;
+
+
+}
+.calBtn{
+    margin: 10px 0px  ;
+    height: 70px;
+    width:100%;
+    border: 2px solid black;
+
+}
+
+.smallBtn {
+    height: 70px;
+    width: 108px;
+    margin: 5px;
+}
+.options{
+    padding:0px;
+    margin: 0px;
+}

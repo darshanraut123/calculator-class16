@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row main center">
+            <div class="col-2"></div>
+            <div class="col-8 maincontainer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 center bg-info rounded p-2"><strong>CALCULATOR</strong></div>
+                    </div>
+                    <div class="row" style="height: 100px;">
+                        <div class="col-12" id="inputCalc">
+                            <input type="text" name="caltxt"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="height: 80px;">
+                        <div class="col-4"><button type="button" class="btn calBtn btn-secondary">Backspace</button>
+                        </div>
+                        <div class="col-4"><button type="button" class="btn calBtn btn-secondary">Clear</button></div>
+                        <div class="col-4"><button type="button" class="btn calBtn btn-secondary">Clear All</button>
+                        </div>
+                    </div>
+                    <div class="row" style="height: auto; padding: 10px;margin-top: 10px;">
+                        <div class="col-2 options">
+                            <button type="button" class="btn calBtn smallBtn btn-secondary"name="mc">MC</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary"name="mr">MR</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary"name="ms">MS</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary"name="mplus">M+</button>
+                        </div>
+                        
+                        <div class="col-6 options">
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="7">7</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="8">8</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="9">9</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="4">4</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="5">5</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="6">6</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="1">1</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="2">2</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="3">3</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="M-">M-</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="dot">.</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="0">0</button>
+                        </div>
+                        <div class="col-4 options">
+                            
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="div">/</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="sqrt">Sqrt</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name ="mul">X</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="sq">x^2</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="minus">-</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="inverse">1/x</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="plus">+</button>
+                            <button type="button" class="btn calBtn smallBtn btn-secondary" name="equals">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
