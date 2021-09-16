@@ -20,146 +20,212 @@ let inverse = document.querySelector(".calBtn[name='inverse']");
 let sq = document.querySelector(".calBtn[name='sq']");
 let equals = document.querySelector(".calBtn[name='equals']");
 let ms = document.querySelector(".calBtn[name='ms']");
-// let dot = document.querySelector(".calBtn[name='dot']");
-// let dot = document.querySelector(".calBtn[name='dot']");
-// let dot = document.querySelector(".calBtn[name='dot']");
-// let dot = document.querySelector(".calBtn[name='dot']");
-// let dot = document.querySelector(".calBtn[name='dot']");
-// txtArea.addEventListener("keyup", function(event) {
-//     if(event.keyCode==13){
-//         if(txtArea.value.match("/[0-9]/g"))
-//             alert("NaN");
-//         else
-//             alert("Number");
-//     }});
 
-
-topBtns[0].addEventListener("click",function(){
+topBtns[0].addEventListener("click", function () {
     let chars = Array.from(txtArea.value);
     chars.pop();
-    txtArea.value=chars.join('');
-}); 
-
-topBtns[1].addEventListener("click",function(){
-    txtArea.value="";
+    txtArea.value = chars.join('');
 });
 
-one.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('1');
+topBtns[1].addEventListener("click", function () {
+    txtArea.value="Cleared console...";
+    setTimeout(()=>{txtArea.value='';},500);
 });
 
-two.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('2');
+topBtns[2].addEventListener("click", function () {
+    localStorage.clear();
+    txtArea.value="Cleared cache...";
+    setTimeout(()=>{txtArea.value='';},500);
 });
 
-three.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('3');
+one.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('1');
 });
 
-four.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('4');
+two.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('2');
 });
 
-five.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('5');
+three.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('3');
 });
 
-six.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('6');
+four.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('4');
 });
 
-seven.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('7');
+five.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('5');
 });
 
-eight.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('8');
+six.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('6');
 });
 
-nine.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('9');
-});
-zero.addEventListener("click",function(){
-    txtArea.value=txtArea.value.concat('0');
+seven.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('7');
 });
 
-dot.addEventListener("click",function(){
+eight.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('8');
+});
+
+nine.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('9');
+});
+zero.addEventListener("click", function () {
+    txtArea.value = txtArea.value.concat('0');
+});
+
+dot.addEventListener("click", function () {
     let subArr = txtArea.value.split(/[+*\-]/);
-    // if(subArr.length==1 && !subArr[0].includes('.')) {
-    //     txtArea.value=txtArea.value.concat('.');
-    //     return;
-    // }
-    let res = subArr.filter(sub=>sub.indexOf('.')!=sub.lastIndexOf('.'));
-    if(res.length!=0)
-        {alert("Incorrect Expression");return;}
-    let lastChar = subArr[subArr.length-1];
-    if(lastChar==undefined||lastChar.includes('+')||lastChar.includes('-')||lastChar.includes('/')||lastChar.includes('*')||lastChar.includes('.') ) return;
-    txtArea.value=txtArea.value.concat('.');
+    let res = subArr.filter(sub => sub.indexOf('.') != sub.lastIndexOf('.'));
+    if (res.length != 0) { alert("Incorrect Expression"); return; }
+    let lastChar = subArr[subArr.length - 1];
+    if (lastChar == undefined || lastChar.includes('+') || lastChar.includes('-') || lastChar.includes('/') || lastChar.includes('*') || lastChar.includes('.')) return;
+    txtArea.value = txtArea.value.concat('.');
 });
 
-plus.addEventListener("click",function(){
+plus.addEventListener("click", function () {
     let arr = Array.from(txtArea.value);
-    let lastChar = arr[arr.length-1];
-    if(lastChar==undefined||lastChar.includes('+')||lastChar.includes('-')||lastChar.includes('/')||lastChar.includes('*')) return;
-    txtArea.value=txtArea.value.concat('+');
+    let lastChar = arr[arr.length - 1];
+    if (lastChar == undefined || lastChar.includes('+') || lastChar.includes('-') || lastChar.includes('/') || lastChar.includes('*')) return;
+    txtArea.value = txtArea.value.concat('+');
 });
 
-minus.addEventListener("click",function(){
+minus.addEventListener("click", function () {
     let arr = Array.from(txtArea.value);
-    let lastChar = arr[arr.length-1];
-    if(lastChar==undefined||lastChar.includes('+')||lastChar.includes('-')||lastChar.includes('/')||lastChar.includes('*')) return;
-    txtArea.value=txtArea.value.concat('-');
+    let lastChar = arr[arr.length - 1];
+    if (lastChar == undefined || lastChar.includes('+') || lastChar.includes('-') || lastChar.includes('/') || lastChar.includes('*')) return;
+    txtArea.value = txtArea.value.concat('-');
 });
 
-mul.addEventListener("click",function(){
+mul.addEventListener("click", function () {
     let arr = Array.from(txtArea.value);
-    let lastChar = arr[arr.length-1];
-    if(lastChar==undefined||lastChar.includes('+')||lastChar.includes('-')||lastChar.includes('/')||lastChar.includes('*')) return;
-    txtArea.value=txtArea.value.concat('*');
+    let lastChar = arr[arr.length - 1];
+    if (lastChar == undefined || lastChar.includes('+') || lastChar.includes('-') || lastChar.includes('/') || lastChar.includes('*')) return;
+    txtArea.value = txtArea.value.concat('*');
 });
 
-div.addEventListener("click",function(){
+div.addEventListener("click", function () {
     let arr = Array.from(txtArea.value);
-    let lastChar = arr[arr.length-1];
-    if(lastChar==undefined||lastChar.includes('+')||lastChar.includes('-')||lastChar.includes('/')||lastChar.includes('*')) return;
-    txtArea.value=txtArea.value.concat('/');
+    let lastChar = arr[arr.length - 1];
+    if (lastChar == undefined || lastChar.includes('+') || lastChar.includes('-') || lastChar.includes('/') || lastChar.includes('*')) return;
+    txtArea.value = txtArea.value.concat('/');
 });
 
-equals.addEventListener("click",function(){
+equals.addEventListener("click", function () {
     let actVal = txtArea.value;
-    if(actVal=="") return
-    else
-    {
-        try{        
-        txtArea.value = eval(actVal);
+    if (actVal == "") return
+    else {
+        try {
+            txtArea.value = eval(actVal);
         }
-        catch(e){
-        alert(e.message);
+        catch (e) {
+            alert(e.message);
         }
     }
 });
 
-sqrt.addEventListener("click",function(){
+sqrt.addEventListener("click", function () {
     equals.click();
     let actVal = txtArea.value;
-    if(actVal=="") return
-    else 
-            txtArea.value = Math.sqrt(actVal);
+    if (actVal == "") return
+    else
+        txtArea.value = Math.sqrt(actVal);
 });
 
-sq.addEventListener("click",function(){
+sq.addEventListener("click", function () {
     equals.click();
     let actVal = txtArea.value;
-    if(actVal=="") return
-    else 
-            txtArea.value = Math.pow(actVal,2);
+    if (actVal == "") return
+    else
+        txtArea.value = Math.pow(actVal, 2);
 });
 
 
-inverse.addEventListener("click",function(){
+inverse.addEventListener("click", function () {
     equals.click();
     let actVal = txtArea.value;
-    if(actVal=="") return
-    else 
-            txtArea.value = 1/actVal;
+    if (actVal == "") return
+    else
+        txtArea.value = 1 / actVal;
 });
+
+let arr = [];
+function storeData() {
+    if (txtArea.value == '') return;
+    else if (isNaN(txtArea.value)) {
+        let data = txtArea.value;
+        txtArea.value="Invalid...";
+        setTimeout(()=>{txtArea.value=data;},300);
+    }
+    else if (ifData()!=null) {
+        arr = ifData();
+        arr.push(txtArea.value);
+        localStorage.setItem("key", arr)
+        txtArea.value="Added...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+    else {
+        arr.push(txtArea.value);
+        localStorage.setItem("key", arr);
+        txtArea.value="Added...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+}
+
+function readData() {
+    let dataPos = ifData();
+    if(dataPos==null){
+        txtArea.value="Empty...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+    else{
+        txtArea.value=dataPos.pop();
+        localStorage.setItem("key", dataPos);
+    }
+}
+function additionData() {
+    let dataPos = ifData();
+    if(isNaN(txtArea.value)) return;
+    else if(dataPos==null){
+        arr = [];
+        arr.push(txtArea.value);
+        localStorage.setItem('key',arr);
+        txtArea.value="Done...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+    else{
+        let pos = dataPos.length-1;
+        dataPos[pos] = (+dataPos[pos] + +txtArea.value);
+        localStorage.setItem('key',dataPos);
+        txtArea.value="Done...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+}
+function substractData() {
+    let dataPos = ifData();
+    if(isNaN(txtArea.value)) return;
+    else if(dataPos==null){
+        txtArea.value="Empty...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+    else{
+        let pos = dataPos.length-1;
+        dataPos[pos] = (+dataPos[pos] - +txtArea.value);
+        localStorage.setItem('key',dataPos);
+        txtArea.value="Done...";
+        setTimeout(()=>{txtArea.value='';},300);
+    }
+}
+function clearData() {
+    localStorage.clear();
+    txtArea.value="Erased..."
+    setTimeout(()=>{txtArea.value="";},300)
+}
+
+function ifData(){
+    if(localStorage.getItem('key')==null || localStorage.getItem('key')=='') return null;
+    else return localStorage.getItem('key').split(',');
+}
